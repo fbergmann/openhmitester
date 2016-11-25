@@ -6,6 +6,15 @@
 # HMITester and OHTLibPreload common sources
 #
 
+# define platform variable
+    DEFINES +=  _GLIBCXX_USE_CXX11_ABI=0
+
+# add here your boost includes if needed
+    LIBS += -L/home/fbergmann/Development/boost_1_62_0/stage/lib/
+    INCLUDEPATH += /home/fbergmann/Development/boost_1_62_0
+    LIBS += -lboost_serialization
+
+
 include(../../common/common.pri)
 
 ####
@@ -32,6 +41,9 @@ else {
 
 QT += script xml network
 CONFIG += debug c++11
+CONFIG += c++11
+
+QMAKE_CXXFLAGS +=-std=c++11
 
 TARGET = qt_linux_hmi_tester
 TEMPLATE = app

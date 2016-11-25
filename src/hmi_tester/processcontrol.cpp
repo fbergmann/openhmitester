@@ -495,7 +495,7 @@ bool ProcessControl::newTestSuite(const std::string& file,
 {
     DEBUG(D_BOTH,"(ProcessControl::newTestSuite)");
     //create a new TestSuite
-    DataModel::TestSuite* aux = _current_testsuite;
+    //DataModel::TestSuite* aux = _current_testsuite;
     _current_testsuite = new DataModel::TestSuite();
 
     //set the values to the test suite
@@ -715,7 +715,7 @@ void ProcessControl::completedPercentageNotification(int i)
 ///
 /// ///
 
-void ProcessControl::testRecordingFinished(DataModel::TestCase* tc)
+void ProcessControl::testRecordingFinished(DataModel::TestCase* /*tc*/)
 {
     DEBUG(D_RECORDING,"(ProcessControl::testRecordingFinished)");
 

@@ -27,6 +27,9 @@ BUILD_DIR = bin
 DESTDIR = $${BUILD_DIR}
 MOC_DIR = $${BUILD_DIR}/mocs
 OBJECTS_DIR = $${BUILD_DIR}/objs
+CONFIG += c++11
+
+QMAKE_CXXFLAGS +=-std=c++11
 
 # config
 QT       += core gui
@@ -34,7 +37,7 @@ CONFIG += qtestlib no_keywords
 
 # targets
 #SUBDIRS += hmi_tester/
-SUBDIRS += qt_linux_hmi_tester
-SUBDIRS += qt_linux_lib_preload
+SUBDIRS += linux/qt_linux_hmi_tester
+SUBDIRS += linux/qt_linux_lib_preload
 
 

@@ -36,6 +36,10 @@ ControlTestItem::ControlTestItem()
     type(CTI_TYPE);
 }
 
+ControlTestItem::~ControlTestItem()
+{
+
+}
 
 ///
 ///  error
@@ -45,6 +49,11 @@ ControlTestItem::ControlTestItem()
 CTI_Error::CTI_Error()
 {
     subtype(CTI_ERROR);
+}
+
+CTI_Error::~CTI_Error()
+{
+
 }
 
 //error message
@@ -69,6 +78,11 @@ CTI_StartPlayback::CTI_StartPlayback()
     subtype(CTI_START_PLAYBACK);
 }
 
+CTI_StartPlayback::~CTI_StartPlayback()
+{
+
+}
+
 
 ///
 /// StopPlayback
@@ -80,6 +94,11 @@ CTI_StopPlayback::CTI_StopPlayback()
     subtype(CTI_STOP_PLAYBACK);
 }
 
+CTI_StopPlayback::~CTI_StopPlayback()
+{
+
+}
+
 ///
 /// PausePlayback
 ///
@@ -88,6 +107,11 @@ CTI_StopPlayback::CTI_StopPlayback()
 CTI_PausePlayback::CTI_PausePlayback()
 {
     subtype(CTI_PAUSE_PLAYBACK);
+}
+
+CTI_PausePlayback::~CTI_PausePlayback()
+{
+
 }
 
 
@@ -101,6 +125,11 @@ CTI_StartRecording::CTI_StartRecording()
     subtype(CTI_START_RECORDING);
 }
 
+CTI_StartRecording::~CTI_StartRecording()
+{
+
+}
+
 
 ///
 /// StopRecording
@@ -112,6 +141,11 @@ CTI_StopRecording::CTI_StopRecording()
     subtype(CTI_STOP_RECORDING);
 }
 
+CTI_StopRecording::~CTI_StopRecording()
+{
+
+}
+
 ///
 /// PauseRecording
 ///
@@ -120,6 +154,11 @@ CTI_StopRecording::CTI_StopRecording()
 CTI_PauseRecording::CTI_PauseRecording()
 {
     subtype(CTI_PAUSE_RECORDING);
+}
+
+CTI_PauseRecording::~CTI_PauseRecording()
+{
+
 }
 
 
@@ -133,3 +172,7 @@ CTI_EventExecuted::CTI_EventExecuted()
     subtype(CTI_EVENT_EXECUTED);
 }
 
+CTI_EventExecuted::~CTI_EventExecuted()
+{
+
+}

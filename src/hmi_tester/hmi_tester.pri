@@ -2,6 +2,15 @@
 INCLUDEPATH += $$PWD
 DEPENDPATH += $$PWD
 
+# define platform variable
+    DEFINES +=  _GLIBCXX_USE_CXX11_ABI=0
+
+# add here your boost includes if needed
+    LIBS += -L/home/fbergmann/Development/boost_1_62_0/stage/lib/
+    INCLUDEPATH += /home/fbergmann/Development/boost_1_62_0
+    LIBS += -lboost_serialization -lboost_system -lboost_thread
+
+
 # directories ($$PWD) are set before files because of an error in Qt5
 
 SOURCES += $$PWD/hmitestercontrol.cpp \

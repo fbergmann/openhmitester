@@ -26,7 +26,7 @@
 #include <debug.h>
 #include <cassert>
 
-PreloadController::PreloadController(PreloadingControl* pc, EventConsumer *ec, EventExecutor *ex)
+PreloadController::PreloadController(PreloadingControl* /*pc*/, EventConsumer *ec, EventExecutor *ex)
 {
     _ev_consumer = ec;
     _ev_executor = ex;

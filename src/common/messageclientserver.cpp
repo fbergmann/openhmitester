@@ -81,11 +81,15 @@ MessageClientServer::MessageClientServer ( QObject *parent, uint port, bool isSe
               << SERVER_IP << " and port " << _port << ".");
         currentSocket_->connectToHost(QHostAddress(SERVER_IP), _port );
         if (currentSocket_->waitForConnected(2000))
+        {
             DEBUG(D_COMM,"(MessageClientServer::MessageClientServer) Client successfully connected.");
+        }
         else
+        {
 
             DEBUG(D_COMM,"(MessageClientServer::MessageClientServer) Error while connecting client. Code = "
                   + QString::number(currentSocket_->error()).toStdString());
+        }
     }
 }
 

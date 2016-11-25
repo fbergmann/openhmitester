@@ -82,9 +82,17 @@ bool QtPreloadingControl::Do_preload()
   replace the original implementation and add the
 */
 
-
+#if QT_VERSION >= 0x050000
 bool QWidget::nativeEvent(const QByteArray & eventType, void * message, long * result)
+#else
+bool QWidget::x11Event ( XEvent * event )
+#endif
 {
     QtPreloadingControl::Do_preload();
     return false;
+}
+
+EventExecutor::~EventExecutor()
+{
+
 }

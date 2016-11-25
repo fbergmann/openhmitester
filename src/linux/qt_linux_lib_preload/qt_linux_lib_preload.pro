@@ -11,6 +11,9 @@ equals(QT_MAJOR_VERSION, 5) {
    QT +=
    CONFIG += qtestlib
 }
+CONFIG += c++11
+
+QMAKE_CXXFLAGS +=-std=c++11
 
 QT += network xml
 CONFIG += debug

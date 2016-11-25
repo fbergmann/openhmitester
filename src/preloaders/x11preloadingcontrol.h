@@ -33,7 +33,7 @@ class X11PreloadingControl : public PreloadingControl
 public:
 
     X11PreloadingControl(EventConsumer* ec, EventExecutor* ex);
-    ~X11PreloadingControl();
+    virtual ~X11PreloadingControl();
 
 private:
 

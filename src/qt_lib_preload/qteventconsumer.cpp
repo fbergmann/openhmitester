@@ -303,7 +303,7 @@ void QtEventConsumer::handleKeyPressEvent ( QObject *obj, QEvent *event )
 }
 
 
-void QtEventConsumer::handleCloseEvent ( QObject *obj, QEvent *event )
+void QtEventConsumer::handleCloseEvent ( QObject *obj, QEvent */*event */)
 {
     // check the object
     QWidget *widget = isValidWidget(obj);
@@ -492,13 +492,13 @@ bool QtEventConsumer::isValidQOEMouse(QOE::QOE_Mouse& qoe)
     return true;
 }
 
-bool QtEventConsumer::isValidQOEKey(QOE::QOE_Key& qoe)
+bool QtEventConsumer::isValidQOEKey(QOE::QOE_Key& /*qoe*/)
 {
     // nothing
     return true;
 }
 
-bool QtEventConsumer::isValidQOEWindow(QOE::QOE_Window& qoe)
+bool QtEventConsumer::isValidQOEWindow(QOE::QOE_Window& /*qoe*/)
 {
     // nothing
     return true;

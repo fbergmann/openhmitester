@@ -53,8 +53,8 @@ win{
 # testbench
 SUBDIRS += testbench/desktop
 testbench/desktop.file = testbench/desktop/simusaes.pro
-SUBDIRS += testbench/web
-testbench/web.file = testbench/web/fancybrowser.pro
+#SUBDIRS += testbench/web
+#testbench/web.file = testbench/web/fancybrowser.pro
 
 
 

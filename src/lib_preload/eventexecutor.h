@@ -29,6 +29,7 @@
 class EventExecutor
 {
 public:
+    virtual ~EventExecutor();
     ///
     /// this method is called to install the event executor
     ///
@@ -49,3 +50,4 @@ public:
 };
 
 #endif // EVENTEXECUTOR_H
+

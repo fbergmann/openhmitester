@@ -27,7 +27,11 @@
 #include <ohtbaseconfig.h>
 #include <QWidget>
 
-QtEventExecutor::QtEventExecutor() : EventExecutor()
+QtEventExecutor::QtEventExecutor()
+    : EventExecutor()
+    , MOUSE_MOVE_DELAY_MS(400)
+    , MOUSE_MOVE_STEPS(18)
+
 {
     //update flags
     f_executing_ = false;
@@ -402,15 +406,15 @@ void QtEventExecutor::_simulateMouseMove(const QPoint &pBegin,
    */
 
     //adapt n and w values
-    uint t = qMax ( qAbs ( dx - ix ), qAbs ( dy - iy ) );//longest movement
+    //uint t = qMax ( qAbs ( dx - ix ), qAbs ( dy - iy ) );//longest movement
     uint w = MOUSE_MOVE_DELAY_MS / MOUSE_MOVE_STEPS;
     assert ( w > 0 );
 
     //go moving...
-    QPoint old ( ix, iy );
+    //QPoint old ( ix, iy );
     const int STEP_X = int ( double ( dx - ix ) / double ( MOUSE_MOVE_STEPS ) );
     const int STEP_Y = int ( double ( dy - iy ) / double ( MOUSE_MOVE_STEPS ) );
-    for ( uint i = 1; i <= MOUSE_MOVE_STEPS; i++ )
+    for ( uint i = 1; i <= (uint)MOUSE_MOVE_STEPS; ++i )
     {
         //calculate current position
         int cx = STEP_X * i  + ix;

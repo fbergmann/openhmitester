@@ -56,6 +56,7 @@ namespace Control
     public:
         //constructor
         ControlTestItem();
+        virtual ~ControlTestItem();
     };
 
     ///
@@ -67,6 +68,7 @@ namespace Control
     public:
         //constructor
         CTI_Error();
+        virtual ~CTI_Error();
 
         //error message
         void description(const std::string&);
@@ -82,6 +84,7 @@ namespace Control
     public:
         //constructor
         CTI_StartPlayback();
+        virtual ~CTI_StartPlayback();
     };
 
     ///
@@ -92,6 +95,7 @@ namespace Control
     public:
         //constructor
         CTI_StopPlayback();
+        virtual ~CTI_StopPlayback();
     };
 
     ///
@@ -102,6 +106,7 @@ namespace Control
     public:
         //constructor
         CTI_PausePlayback();
+        virtual ~CTI_PausePlayback();
     };
 
     ///
@@ -112,6 +117,7 @@ namespace Control
     public:
         //constructor
         CTI_StartRecording();
+        virtual ~CTI_StartRecording();
     };
 
     ///
@@ -122,6 +128,7 @@ namespace Control
     public:
         //constructor
         CTI_StopRecording();
+        virtual ~CTI_StopRecording();
     };
 
     ///
@@ -132,6 +139,7 @@ namespace Control
     public:
         //constructor
         CTI_PauseRecording();
+        virtual ~CTI_PauseRecording();
     };
 
     ///
@@ -142,6 +150,7 @@ namespace Control
     public:
         //constructor
         CTI_EventExecuted();
+        virtual ~CTI_EventExecuted();
     };
 
 

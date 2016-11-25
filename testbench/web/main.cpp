@@ -39,6 +39,7 @@
 ****************************************************************************/
 
 #include <QtWidgets>
+
 #include "mainwindow.h"
 
 static void showHelp(QCommandLineParser &parser, const QString errorMessage = QString())

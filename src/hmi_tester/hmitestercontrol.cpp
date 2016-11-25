@@ -34,7 +34,7 @@
 #include <qtutils.h>
 
 #include <QFile>
-#include <QWindow>
+#include <QMainWindow>
 #include <QDir>
 
 HMITesterControl::HMITesterControl(PreloadingAction *pa, DataModelAdapter *dma, QWidget *parent)
@@ -584,7 +584,7 @@ void HMITesterControl::updateTestSuiteInfo(DataModel::TestSuite* ts)
         {
             // add new actions for current test cases
             QAction *a = NULL;
-            QMenu *m = NULL;
+            //QMenu *m = NULL;
             DataModel::TestSuite::TestCaseList::const_iterator tcit;
             //for each test case at the list...
             for(tcit = ts->testCases().begin(); tcit != ts->testCases().end(); tcit++)

@@ -56,7 +56,7 @@ namespace DataModel
     {
     public:
         TestBase();
-        ~TestBase();
+        virtual ~TestBase();
 
         // Inner types to define maps
         typedef KeyValueMap DataMap;
@@ -100,7 +100,7 @@ namespace DataModel
         TestItem();
         TestItem(int type, int subtype, int timestamp);
         TestItem(DataModel::TestItem*);
-        ~TestItem();
+        virtual ~TestItem();
 
         uuid_t uuid() const;
 
@@ -150,7 +150,7 @@ namespace DataModel
 
     public:
         TestCase();
-        ~TestCase();
+        virtual ~TestCase();
 
         uuid_t uuid() const;
 
@@ -209,7 +209,7 @@ namespace DataModel
     {
     public:
         TestSuite();
-        ~TestSuite();
+        virtual ~TestSuite();
 
         typedef boost::ptr_list<DataModel::TestCase> TestCaseList;
 

@@ -32,6 +32,8 @@ class DataModelAdapter
 {
 public:
 
+    virtual ~DataModelAdapter() {}
+
     // conversion error exception
     class conversion_error_exception : public std::exception
     {
